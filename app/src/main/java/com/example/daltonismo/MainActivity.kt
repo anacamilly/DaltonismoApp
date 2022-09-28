@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
             result ->
         if(result.resultCode == RESULT_OK){
             resposta.resp1 = result.data!!.getStringExtra("RESULTADO").toString()
+            binding.textViewResposta1.text ="${resposta.resp1}"
         }else{
             Toast.makeText(this, "Cancelado", Toast.LENGTH_SHORT).show()
         }
